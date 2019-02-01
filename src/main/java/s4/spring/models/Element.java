@@ -6,6 +6,7 @@ public class Element {
 	
 	public Element() {
 		this.nom="Pas de nom";
+		this.evaluation=0;
 	}
 	
 	public String getNom() {
@@ -21,8 +22,5 @@ public class Element {
 		this.evaluation = evaluation;
 	}
 	
-	public void equals() {
-		
-	}
 	
 }
