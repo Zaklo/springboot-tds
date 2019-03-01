@@ -1,0 +1,78 @@
+{{>main/header}} {{#orga}}
+
+<div class="ui one column divided grid" style="margin-top: 50px">
+	<div class="row">
+		<div class="column">
+			<div class="ui center aligned segment">
+				<h1 class="ui header">Consultation</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="ui cards" style="margin-top: 50px;">
+	<div class="card" style="width: 100%; padding: 15px;">
+		<div class="ui one column divided grid">
+			<div class="row">
+				<div class="column">
+					<div class="ui	 aligned segment" style="background-color: #f9fafb">
+						<h2 class="ui header">
+							<i class="large icons"> <i class="table icon"></i> <i
+								class="corner edit icon"></i>
+							</i> models\Organization
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<table class="ui celled table">
+			<tbody>
+				<tr>
+					<td style="background-color: #f9fafb">Id</td>
+					<td>{{id}}</td>
+				</tr>
+				<tr>
+					<td style="background-color: #f9fafb">Name</td>
+					<td>{{name}}</td>
+				</tr>
+				<tr>
+					<td style="background-color: #f9fafb">Domain</td>
+					<td>{{domaine}}</td>
+				</tr>
+				<tr>
+					<td style="background-color: #f9fafb">Aliases</td>
+					<td>{{aliases}}</td>
+				</tr>
+				<tr>
+					<td style="background-color: #f9fafb">Groupes</td>
+					<td>{{groupes}}</td>
+				</tr>
+				<tr>
+					<td style="background-color: #f9fafb">OrganizationsSettings</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="background-color: #f9fafb">Users</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="ui one column divided grid">
+			<div class="row">
+				<div class="column">
+					<div class="ui	 aligned segment" style="background-color: #f9fafb">
+						<a class="ui grey button" href="/orgas/cancel"><i
+							class="circle outline icon"></i>Cancel</a> <a class="ui red button"
+							href="/orgas/delete/{{id}}"><i class="close icon"></i>Supprimer
+							{{name}}</a> <a class="ui grey button" href="/orgas/edit/{{id}}"><i
+							class="edit icon"></i>Modifier {{name}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{/orga}} {{>main/footer}}

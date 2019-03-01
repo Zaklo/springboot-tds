@@ -1,0 +1,49 @@
+{{>main/header}} {{#orga}}
+<div class="ui one column divided grid" style="margin-top: 50px;">
+	<div class="row">
+		<div class="column">
+			<div class="ui	 aligned segment" style="background-color: #f9fafb">
+				<h2 class="ui header">
+					<i class="large icons"> <i class="table icon"></i> <i
+						class="corner edit icon"></i>
+					</i> models\Organization
+				</h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="ui form" style="margin-top: 25px">
+	<div class="field">
+		<label>Name</label>
+		<div class="ui input">
+			<input type="text" placeholder="Name..." value="{{name}}">
+		</div>
+	</div>
+	<div class="field">
+		<label>Domaine</label>
+		<div class="ui input">
+			<input type="text" placeholder="Domain..." value="{{domaine}}">
+		</div>
+	</div>
+	<div class="field">
+		<label>Aliases</label>
+		<div class="ui input">
+			<input type="text" placeholder="Aliases..." value="{{aliases}}">
+		</div>
+	</div>
+</div>
+
+<div class="ui one column divided grid" style="margin-top: 20px;">
+	<div class="row">
+		<div class="column">
+			<div class="ui	 aligned segment" style="background-color: #f9fafb">
+				<button class="ui positive button"><i class="check circle icon"></i>Save</button>
+				<button class="ui grey button"><i class="circle outline icon"></i>Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/orga}} {{>main/footer}}
