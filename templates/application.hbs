@@ -1,0 +1,19 @@
+<div class="container">
+  <div id="contact" ng-controller="contactController as cCtrl">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Contacts</div>
+      <div class="panel-body">
+        <input type="text" placeholder="Filtrer..." data-ng-model="q" class="form-control">
+        <table class="table table-striped" id="lstContact">
+
+
+        </table>
+      </div>
+      <frm-contact-elem></frm-contact-elem>
+      <div class="container">
+
+      </div>
+    </div>
+  </div>
+</div>
+{{outlet}}
