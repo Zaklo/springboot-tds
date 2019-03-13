@@ -1,0 +1,73 @@
+{{>main/header}} {{#orga}}
+
+<div class="ui one column divided grid" style="margin-top: 50px">
+	<div class="row">
+		<div class="column">
+			<div class="ui center aligned segment">
+				<h1 class="ui header">Edition</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="ui cards" style="margin-top: 50px;">
+	<div class="card" style="width: 100%; padding: 15px;">
+		<div class="ui one column divided grid">
+			<div class="row">
+				<div class="column">
+					<div class="ui	 aligned segment" style="background-color: #f9fafb">
+						<h2 class="ui header">
+							<i class="large icons"> <i class="table icon"></i> <i
+								class="corner edit icon"></i>
+							</i> models\Organization
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form method="POST"
+			action="http://localhost:8081/orgas/edit/edition/{{id}}/">
+			<div class="ui form" style="margin-top: 25px">
+				<div class="field">
+					<label>Name</label>
+					<div class="ui input">
+						<input type="text" placeholder="Name..." value="{{name}}"
+							name="new_name" id="new_name">
+					</div>
+				</div>
+				<div class="field">
+					<label>Domaine</label>
+					<div class="ui input">
+						<input type="text" placeholder="Domain..." value="{{domaine}}"
+							name="new_domain" id="new_domain">
+					</div>
+				</div>
+				<div class="field">
+					<label>Aliases</label>
+					<div class="ui input">
+						<input type="text" placeholder="Aliases..." value="{{aliases}}"
+							name="new_aliases" id="new_aliases">
+					</div>
+				</div>
+			</div>
+
+			<div class="ui one column divided grid" style="margin-top: 20px;">
+				<div class="row">
+					<div class="column">
+						<div class="ui	 aligned segment" style="background-color: #f9fafb">
+							<button type=submit class="ui positive button">
+								<i class="check circle icon"></i>Save
+							</button>
+							<a class="ui grey button" href="/orgas/edition/cancel"><i
+								class="circle outline icon"></i>Cancel</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{{/orga}} {{>main/footer}}

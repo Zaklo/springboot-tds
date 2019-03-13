@@ -1,0 +1,66 @@
+{{>main/header}}
+
+
+<div class="ui one column divided grid" style="margin-top: 50px">
+	<div class="row">
+		<div class="column">
+			<div class="ui center aligned segment">
+				<h1 class="ui header">Bienvenue dans le TD2 !</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui cards">
+	<div class="card" style="width: 100%; margin-top: 50px;">
+		<div class="content">
+			<div class="header">
+				<a class="ui secondary button" href="/orgas/new"> <i
+					class="plus icon"></i>Ajouter une organisation
+				</a>
+			</div>
+			<table class="ui table" id="accueil">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Domaine</th>
+						<th>Aliases</th>
+						<th></th>
+					</tr>
+				</thead>
+				{{#orgas}}
+				<tbody>
+					<tr class=highlight>
+						<td data-label="Id">{{Id}}</td>
+						<td data-label="Name">{{name}}</td>
+						<td data-label="Domaine">{{domaine}}</td>
+						<td data-label="Aliases">{{aliases}}</td>
+						<td><a href="/orgas/delete/{{id}}"
+							class="circular ui icon button basic negative right floated">
+								<i class="close icon"></i>
+						</a> <a href="/orgas/edit/{{id}}"
+							class="circular ui icon button basic right floated"> <i
+								class="edit icon"></i>
+						</a> <a href="/orgas/display/{{id}}"
+							class="circular ui icon button basic right floated"> <i
+								class="eye icon"></i>
+						</a></td>
+					</tr>
+				</tbody>
+				{{/orgas}}
+			</table>
+		</div>
+		<div class="extra content" style="background-color: #f9fafb">
+			<div class="ui search">
+				<div class="ui icon input right floated">
+					<input class="prompt" type="text" style="border-radius: 7px">
+					<i class="search icon"></i>
+				</div>
+				<div class="results"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{>main/footer}}

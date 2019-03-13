@@ -1,0 +1,12 @@
+{{> vueJS/header}}
+
+<m-confirm-button 
+title="Test de dialogue" 
+:message="msg" 
+validatecaption="okay"
+@validation="validate"
+cancelcaption="fermer" 
+@cancelation="cancel"
+>Bonjour</m-confirm-button>
+
+{{> vueJS/footer}}
