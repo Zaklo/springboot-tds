@@ -1,11 +1,16 @@
 package com.example.td5.entities;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
+@Entity
 public class Script {
 
 	@Id
@@ -15,6 +20,18 @@ public class Script {
 	private String description;
 	private String content;
 	private Date creationDate;
+
+	@ManyToOne
+	private Language language;
+
+	@ManyToOne
+	private User user;
+
+	@OneToMany
+	private List<History> histories;
+
+	@ManyToOne
+	private Category category;
 
 	public String getId() {
 		return id;

@@ -1,9 +1,14 @@
 package com.example.td5.entities;
 
+import java.util.List;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+@Entity
 public class User {
 
 	@Id
@@ -13,6 +18,9 @@ public class User {
 	private String password;
 	private String email;
 	private String identity;
+
+	@OneToMany
+	private List<Script> scripts;
 
 	public String getId() {
 		return id;
