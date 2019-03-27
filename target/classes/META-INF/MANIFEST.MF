@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: Td_spring
+Implementation-Title: td5
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: 21707668
+Built-By: Antoine
 Implementation-Vendor-Id: com.example
-Build-Jdk: 1.8.0_191
+Build-Jdk: 1.8.0_201
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/Td_spring
+ ot-starter-parent/td5
 Created-By: Maven Integration for Eclipse
 
