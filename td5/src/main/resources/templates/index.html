@@ -1,0 +1,33 @@
+{{ > header}}
+
+	<a href="http://localhost:8081/logout">Se deconnecter</a></h2>
+	
+	<h3>Vos scripts : </h3>
+	
+	<table class="ui single-line table">
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nom</th>
+			<th>Description</th>
+			<th>Date de création</th>
+			<th>Modifications</th>
+		</tr>
+		</thead>
+	
+		<tbody>
+			{{#user.scripts}}
+				<tr>
+					<td>{{id}}</td>
+					<td>{{title}}</td>
+					<td>{{description}}</td>
+					<td>{{creationDate}}</td>
+					<td><a  href="/script/{{id}}" class="ui basic sircular button"><i class="file icon"></i></a></td>
+				</tr>
+			{{/user.scripts}}
+		</tbody>
+	</table>
+	
+	<a href="http://localhost:8081/script/new" class="ui basic button"><i class="add icon"></i>Ajouter un script</a>
+
+{{ > footer}}
